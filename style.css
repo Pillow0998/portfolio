@@ -1,0 +1,491 @@
+/* Couleurs portfolio*/
+:root {
+  --fond: #080e1a;
+  --carte: #191f27;
+  --texte: #f8fafc;
+  --secondaire: #b6bdcb;
+  --violet: #7c3aed;
+}
+
+/* Mode clair */
+body.light{
+    --fond: #f8fafc;    
+    --carte: #e2e8f0;
+    --texte: #0f172a;
+    --secondaire: #475569;
+}
+
+/* Style général */
+* {
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    background: var(--fond);
+    color: var(--texte);
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Navigation */
+
+header{
+    padding: 20px 8%;
+    background: var(--carte);
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+nav a {
+    color: var(--secondaire);
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+nav a:hover {
+    color: var(--violet);
+}
+
+/* Présentation */
+.hero{
+    min-height: 65vh;
+    padding: 80px 8%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 40px;
+    background:
+    radial-gradient(
+        circle at 80% 40%,
+        #7c3aed33,
+        transparent 50%
+    );
+
+
+}
+
+.hero h1{
+    font-size: clamp(2rem, 5vw, 4rem);
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero span{
+    color: #a78bfa;
+}
+
+.hero p{
+    max-width: 550px;
+    color: var(--secondaire);
+}
+
+/* Boutons */
+.btn-primary{
+    display: inline-block;
+    width: fit-content;
+    padding: 12px 24px;
+    background: var(--violet);
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+.btn-primary:hover{
+    background: #6d28d9;
+    transform: translateY(-3px);
+}
+
+/* Section projets */
+
+.projets{
+    padding: 70px 8%;
+}
+
+.projets h2{
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.grille-projects{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.carte{
+    background: var(--carte);
+    padding: 20px;
+    min-width: 0;
+    transition: transform 0.3s;
+    position: relative;
+
+    background: linear-gradient(
+        145deg,
+        var(--carte),
+        var(--fond)
+    );
+
+    border: 1px solid #a78bfa26;
+    border-radius: 22px;
+    box-shadow: 0 8px 25px #00000020;
+
+    transition: 
+    transform 0.3s ease,
+    border-color: 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/*Reflet discret*/
+.carte::before{
+    content: ;
+}
+
+.carte:hover{
+    transform: translateY(-8px);
+}
+
+.carte img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.carte h3{
+    margin-bottom: 5px;
+}
+
+/* Bouton thème */
+#theme-toggle{
+    background: var(--violet);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20%;
+    cursor: pointer;
+}
+
+/* Version mobile */
+@media (max-width: 768px){
+    .hero{
+        padding: 70px 6%;
+    }
+
+
+    .grille-projects{
+        grid-template-columns:1fr;
+    }
+}
+
+header{
+    padding: 20px 6%;
+}
+
+nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav a{
+    margin-right: 0;
+}
+
+.logo{
+    font-size: 1.2rem;
+    color: var(--texte);
+    font-weight: bold;
+}
+
+.hero-actions{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.hero h1 span{
+    display: block;
+    color: #a78bfa;
+}
+
+.btn-secondary{
+    display: inline-block;
+    padding: 12px 24px;
+    color: var(--texte);
+    text-decoration: none;
+    border-radius: 10px;
+    border: 1px solid var(--secondaire);
+
+}
+
+.btn-secondary:hover{
+    background: var(--carte);
+}
+
+.hero-visuel img{
+    display: block;
+    width: 100%;
+    max-height: 420px;
+    max-width: 480px;
+    object-fit:contain;
+    border-radius: 20px; 
+    filter: drop-shadow(0 20px 35px #7c3aed40);
+    margin: auto;
+}
+
+@media (max-width: 768px) {
+    .hero{
+        grid-template-columns: 1fr;
+        padding: 60px 6%;
+    }
+}
+
+.section-description{
+    color: var(--secondaire);
+    margin-bottom: 30px;
+}
+
+.grille-projects{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.carte{
+    min-width: 0;
+    padding: 16px;
+    border:1px solid #a78bfa26;
+    transition: transform 0.25s, box-shadow 0.25s;
+    box-shadow: 0 10px 30px #00000020;
+}
+
+.carte:hover{
+    transform: translateY(-6px);
+    border-color: #a78bfa;
+}
+
+.apercu-projet{
+    height: 150px;
+    display: grid;
+    place-items: center;
+    border-radius: 10px;
+    font-size: 3rem;
+    color: white;
+}
+
+.apercu-taches{
+    background: linear-gradient(135deg, #312e81, #8b5cf6)   ;
+}
+
+.apercu-meteo{
+    background: linear-gradient(135deg, #075985, #38bdf8);
+}
+
+.carte h3{
+    margin: 18px 0 8px;
+}
+
+.carte p{
+    color: var(--secondaire);
+    margin: 0 0 20px;
+}
+
+.technologies{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    list-style:none;
+    padding: 0;
+    margin: 0;
+}
+
+.technologies li{
+    background: #7c3aed;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: white;
+}
+
+@media (max-width: 768px){
+    .grille-projects{
+        grid-template-columns: 1fr;
+    }
+}
+
+.contact{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    gap: 50px;
+}
+
+.contact-texte,
+.contact-form{
+    min-width: 0;
+}
+
+.contact h2{
+    font-size:clamp(1.8rem, 3vw, 2.5rem);
+    margin-top: 0;
+    line-height: 1.2;
+}
+
+.contact-email{
+    display: inline-block;
+    margin: 15px 0;
+    color: var(--texte);
+    text-decoration-color: #a78bfa;
+    text-underline-offset: 6px;
+    overflow-wrap: anywhere;
+}
+
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    padding: 28px;
+    border-radius: var(--carte);
+    border: 1px solid #a78bfa33;
+}
+
+.contact-form label{
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.contact-form input,
+.contact-form textarea{
+    width: 100%;
+    padding: 12px 14px;
+    margin-bottom: 20px;
+    border: 1px solid var(--secondaire);
+    border-radius: 8px;
+    background: var(--fond);
+    color: var(--texte);
+    font: inherit;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder{
+    color: var(--secondaire);
+}
+
+.contact-form input:focus-visible,
+.contact-form textarea:focus-visible,
+.contact a:focus-visible,
+.contact button:focus-visible{
+    outline: 3px solid #a78bfa;
+    outline-offset: 3px;
+}
+
+.contact-note{
+    color: var(--secondaire);
+    font-size: 0.85rem;
+    margin: 16px 0 0;
+}
+
+@media (max-width: 768px) {
+    .contact{
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+}
+
+@keyframes apparition{
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-text {
+    animation: apparition 0.7s ease-out both;
+}
+
+.hero-visuel {
+    animation: apparition 0.9s ease-out 0.15s both;
+}
+
+/*Bouton*/
+.btn-primary,
+.btn-secondary{
+    transition: 
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background-color 0.25s ease,
+    color 0.25s ease;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px #7c3aed35;
+}
+
+.btn-primary:active,
+.btn-secondary:active{
+    transform: translateY(0);
+}
+
+/*Liens de navigation*/
+nav ul a {
+    position: relative;
+    display: inline-block;
+    transition: color 0.25;
+}
+
+nav ul a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background: var(--violet);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.25s ease;
+}
+
+nav ul a:hover::after,
+nav ul a:focus-visible::after{
+    transform: scaleX(1);
+}
+
+/* Respect des préférences de mouvements */
+@media (prefers-reduced-motion: reduce) {
+    html{
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after{
+        animation: none !important;
+        transition: none !important;
+    }
+}

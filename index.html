@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio développeur</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+    <body> 
+    <header>
+        <nav aria-label="Menu de navigation">
+            <a href="#" class="logo">&gt;Mon Portfolio</a>
+            <ul>
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#apropos">À propos</a></li>
+                <li><a href="#projets">Projets</a></li>
+                <li><a href="#contact">Contact</a></li>
+            <button id="theme-toggle"
+                    aria-label="Activer le mode clair">
+                  ☀️  
+                
+                </button>
+
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="accueil" class="hero">
+            <div class="hero-text">
+            <h1>Bienvenue sur mon portfolio</h1>
+            <p>Développeur junior</p>
+            <div class="hero-actions">
+                <a href="#projets" class="btn-primary">
+                    Voir mes projets</a>
+                <a href="cv.pdf" class="btn-secondary">Télécharger mon CV</a>
+            </div>
+        </div>
+
+        <div class="hero-visuel">
+            <img src="ordinateur.png"
+                    alt="Ordinateur portable avec un éclairage coloré">
+        </div>
+            </section>
+
+        <section id="apropos">
+            <h2>À propos de moi</h2>
+            <p>Je suis un développeur en reconversion. J'aime apprendre de nouvelles technologies et relever des défis.</p>
+        </section>
+        
+        <section id="projets" class="projects">
+            <h2>Mes projets</h2>
+            <p class="section-description">
+                Projets pratiquer et progresser.
+            </p>
+            
+            <div class="grille-projects">
+                <article class="carte">
+                    <div class="apercu-galerie" aria_hidden="true">
+                        📷
+                    </div>
+
+                    <h3>Galerie photo </h3>
+                    <p>Une galerie responsive pour présenter des images.</p>
+
+                    <ul class="technologies" aria-label="Technologie utilisées">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </article>
+
+                <article class="carte">
+                    <div class="apercu-todolist" aria_hidden="true">
+                        📝
+                    </div>
+
+                    <h3>To-do List</h3>
+                    <p>Une application pour gérer vos tâches quotidiennes.</p>
+
+                    <ul class="technologies" aria-label="Technologie utilisées">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </article>
+
+                <article class="carte">
+                    <div class="apercu-projet apercu-meteo" aria_hidden="true">
+                        🌤
+
+                    </div>
+
+                    <h3>Météo</h3>
+                    <p>Une application de prévision météo simple.</p>
+
+                    <ul class="technologies" aria-label="Technologie utilisées">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                    </ul>
+            </div>
+        </section>
+        <section id="contact" class="contact">
+            <div class="contact-info">
+                <h2>Contactez-moi</h2>
+                <p>Vous pouvez me contacter via le formulaire ci-dessous ou par email à
+                     <a href="mailto:    **">    **</a>.
+                    </p>
+                </div>  
+          
+        <form class="contact-form" action="#" method="post">
+
+        </form>        
+
+        <form action="#" method="post">
+                <label for="nom">Nom :</label>
+                <input type="text" id="nom" name="nom" required>
+
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message :</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit" class="btn-primary">
+                    Envoyer
+                </button>
+                <p class="contact-note">
+                    Formulaire de contact
+                    Contactez-moi via le formulaire ci-dessus ou par email à
+                    <a href="mailto:    **">    **</a>
+                </p>
+            </section>
+            </form>    
+
+
+        </main>
+    
+
+    </body>
+
+
+
+
+</html>
